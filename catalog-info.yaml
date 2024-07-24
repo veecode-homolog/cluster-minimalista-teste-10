@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: cluster-minimalista-teste-10-location
+  description: Location to import all cluster-minimalista-teste-10 catalog components
+spec:
+  targets:
+    - ./.platform/*.yaml
