@@ -8,7 +8,7 @@ metadata:
     ingress_type: kong
     certificate_account_email: platformss@vee.codes
     certificate_environment_type: staging
-    public_ip: 52.204.119.63
+    public_ip: 34.231.249.212
   annotations:
     github.com/project-slug: veecode-homolog/cluster-minimalista-teste-10
     grafana/dashboard-selector: cluster-minimalista-teste-10
@@ -16,7 +16,7 @@ metadata:
     infracost/project: cluster-minimalista-teste-10
     backstage.io/techdocs-ref: dir:..
     github.com/workflows: terraform-deploy.yml,start-instance.yml,stop-instance.yml,kubeconfig.yml,terraform-destroy.yml,infracost.yml
-    cluster/instructions: "# Run the following commands to import the kubeconfig:\n  ssh -i ./cert.pem -o StrictHostKeyChecking=no $USERNAME@$52.204.119.63 \"mkdir -p .kube && k3d kubeconfig get k3s > ~/.kube/config\"\n  scp -i ./cert.pem $USERNAME@$52.204.119.63:~/.kube/config ~/.kube/config-cluster-minimalista-teste-10\n  yq -e 'del(.clusters[0].cluster.certificate-authority-data) | .clusters[0].cluster.insecure-skip-tls-verify=true | .clusters[].cluster.server |= sub(\"0.0.0.0\", \"52.204.119.63\")' -i ~/.kube/config-cluster-minimalista-teste-10\n  export KUBECONFIG=~/.kube/config-cluster-minimalista-teste-10\n  kubectl get pods -A\n"
+    cluster/instructions: "# Run the following commands to import the kubeconfig:\n  ssh -i ./cert.pem -o StrictHostKeyChecking=no $USERNAME@$34.231.249.212 \"mkdir -p .kube && k3d kubeconfig get k3s > ~/.kube/config\"\n  scp -i ./cert.pem $USERNAME@$34.231.249.212:~/.kube/config ~/.kube/config-cluster-minimalista-teste-10\n  yq -e 'del(.clusters[0].cluster.certificate-authority-data) | .clusters[0].cluster.insecure-skip-tls-verify=true | .clusters[].cluster.server |= sub(\"0.0.0.0\", \"34.231.249.212\")' -i ~/.kube/config-cluster-minimalista-teste-10\n  export KUBECONFIG=~/.kube/config-cluster-minimalista-teste-10\n  kubectl get pods -A\n"
 spec:
   type: ec2
   lifecycle: experimental
